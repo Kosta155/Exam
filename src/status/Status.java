@@ -14,20 +14,23 @@ import java.util.Scanner;
  * program will accept and produce wrong results. 
  * change the code to use enums which avoids String input 
  * then print the status details. 
- * @author srinivsi 
+ * @author srinivsi
+ * @modified by Kostika Nini
  */
 public class Status {
 
     /**
      * @param args the command line arguments
      */
+    
+    
     public static void main(String[] args)
     {
     Scanner in =new Scanner(System.in);
     System.out.println("Enter the user status code (zero,one,two,three) in string");
-    String code = in.next();
-    StausUser t= new StausUser();
-    t.statusDetail(code); 
+     code = in.next();
+    StausUser t = new Staususer(Staususer.Posibilities.values()[code]);
+     
     }
     
 }

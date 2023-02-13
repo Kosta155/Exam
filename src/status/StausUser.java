@@ -11,9 +11,32 @@ package status;
  */
 public class StausUser 
 {
-   public void statusDetail(String code)
+    public enum Posibilities{
+     ZERO,
+     ONE ,     
+     TWO ,    
+     Three    
+       }
+    private Posibilities posibility;
+    public StausUser(Posibilities posibility)
+    {
+    this.posibility = posibility;
+    }
+
+    public Posibilities getPosibility() {
+        return posibility;
+    }
+
+    public void setPosibility(Posibilities posibility) {
+        this.posibility = posibility;
+    }
+    
+    
+    
+    
+   public void statusDetail()
 {
-switch(code.toUpperCase())
+switch(Posibilities posibility)
         {
         case "ZERO": System.out.println("REJECTED");
         break;
@@ -28,7 +51,7 @@ switch(code.toUpperCase())
         default:
          System.out.println("NOT VALID CODE");
         break;
-        }
+}
 }
  
 }
